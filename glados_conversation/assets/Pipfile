@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+speechrecognition = "*"
+pyaudio = {path = "./PyAudio-0.2.11-cp39-cp39-win_amd64.whl"} #The way I installed the PyAudio library
+gtts = "*"
+playsound = "*"
+
+[dev-packages]
+pylint = "*"
+
+[requires]
+python_version = "3.9"
