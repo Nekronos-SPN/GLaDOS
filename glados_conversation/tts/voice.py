@@ -7,7 +7,7 @@ from gtts import gTTS
 from playsound import playsound
 from pathlib import Path
 
-def listen(microphone = sr.Microphone()):
+def listen(microphone = sr.Microphone()) -> str:
     """Listens to the words said by the user and converts it into a string."""
     r = sr.Recognizer()
     # Gets the default microphone
@@ -17,7 +17,7 @@ def listen(microphone = sr.Microphone()):
         try:
             voice_text = r.recognize_google(audio, language="es-ES").capitalize()
         except:
-            voice_text = "Lo siento no te he entendido"
+            voice_text = "ERROR"
     return voice_text
     
 def talk(text:str):
